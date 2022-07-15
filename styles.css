@@ -53,3 +53,18 @@ h6 {
     padding-left: 1em;
     list-style: square;
 }
+
+.pk,
+.nok {
+    padding: 1em 3em;
+    border-radius: 1em;
+    width: max-content;
+}
+
+.ok {
+    background-color: green
+}
+
+.nok {
+    background-color: hsl(0, 90%, 50%)
+}
