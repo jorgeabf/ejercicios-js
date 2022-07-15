@@ -2,16 +2,23 @@ const d = document;
 const container = d.querySelector(".container");
 
 cambiarEstadoBoton = (e) => {
-  const target = e.target;
+  let target = e.target;
 
-  if (target.textContent === "OK") {
+  var ejercicioNoResuelto = () => {
     target.textContent = "NO";
     target.classList.remove("ok");
     target.classList.add("no");
-  } else if (target.textContent === "NO") {
+  };
+  const ejercicioResuelto = () => {
     target.textContent = "OK";
     target.classList.remove("no");
     target.classList.add("ok");
+  };
+
+  if (target.textContent === "OK") {
+    ejercicioNoResuelto();
+  } else if (target.textContent === "NO") {
+    ejercicioResuelto();
   }
 };
 
