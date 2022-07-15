@@ -25,7 +25,17 @@ h6 {
 .container {
     max-width: 80ch;
     margin: 0 auto;
-    padding: 1em
+    padding: 2em 1em
+}
+
+.titulo {
+    text-transform: uppercase;
+    color: hsl(16, 80%, 50%)
+}
+
+.titulo-2 {
+
+    color: hsl(210, 50%, 83%);
 }
 
 .lista {
