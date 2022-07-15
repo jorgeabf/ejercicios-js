@@ -94,3 +94,16 @@ h6 {
 .no {
     padding-inline: 4.05em;
 }
+
+.boton-dark-mode {
+    margin-left: auto;
+    margin-bottom: 1em;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 3em;
+    text-align: right;
+    font-size: 2rem;
+    background-color: hsl(210, 50%, 22%);
+    cursor: pointer;
+    display: block;
+}
