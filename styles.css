@@ -9,8 +9,21 @@ body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    background-color: hsl(210, 50%, 83%);
+    color: hsl(0, 0%, 20%);
+}
+
+body.dark-mode {
     background-color: #123;
     color: hsl(0, 0%, 90%);
+}
+
+.container.dark-mode {
+    background-color: hsl(211, 49%, 17%)
+}
+
+.lista__item.dark-mode {
+    background-color: hsl(210, 50%, 22%);
 }
 
 h1,
@@ -25,8 +38,14 @@ h6 {
 .container {
     max-width: 80ch;
     margin: 0 auto;
-    padding: 2em;
-    background-color: #162b41;
+    padding: 2em 4em;
+    background-color: hsl(211, 49%, 87%)
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2em 1.5em;
+    }
 }
 
 .titulo {
@@ -38,7 +57,6 @@ h6 {
 .titulo-2 {
     text-align: center;
     text-transform: uppercase;
-    color: hsl(210, 50%, 83%);
 }
 
 .lista {
@@ -51,12 +69,11 @@ h6 {
     padding: 1em;
     padding-left: -2em;
     border-radius: .3em;
-    background-color: hsl(210, 50%, 22%);
+    background-color: hsl(211, 49%, 95%)
 }
 
 .lista__item::marker {
-    background-color: hsl(0 50% 83%);
-    color: hsl(50, 100%, 50%);
+    color: hsl(0, 50%, 50%);
 }
 
 .lista__item,
@@ -77,6 +94,7 @@ h6 {
     padding: .5em 2em;
     border-radius: 3em;
     width: max-content;
+    color: white;
     cursor: pointer;
 }
 
@@ -96,14 +114,18 @@ h6 {
 }
 
 .boton-dark-mode {
+    width: 3rem;
+    height: 3rem;
     margin-left: auto;
     margin-bottom: 1em;
-    padding: .5rem 1rem;
     border: none;
-    border-radius: 3em;
+    border-radius: 50%;
     text-align: right;
-    font-size: 2rem;
-    background-color: hsl(210, 50%, 22%);
+    font-size: 1.5rem;
+    background-color: hsl(0, 40%, 50%);
     cursor: pointer;
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
