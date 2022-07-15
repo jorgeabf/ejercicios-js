@@ -54,17 +54,17 @@ h6 {
     list-style: square;
 }
 
-.pk,
+.ok,
 .nok {
-    padding: 1em 3em;
-    border-radius: 1em;
+    padding: .5em 2em;
+    border-radius: 3em;
     width: max-content;
 }
 
 .ok {
-    background-color: green
+    background-color: hsl(120, 50%, 25%)
 }
 
 .nok {
-    background-color: hsl(0, 90%, 50%)
+    background-color: hsl(0, 50%, 50%)
 }
