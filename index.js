@@ -1,7 +1,6 @@
 const container = document.querySelector(".container");
 
 cambiarEstadoBoton = (e) => {
-  e.stopPropagation();
   const target = e.target;
 
   if (target.textContent === "OK") {
@@ -13,8 +12,6 @@ cambiarEstadoBoton = (e) => {
     target.classList.remove("no");
     target.classList.add("ok");
   }
-  console.log(`Texto Botón: ${target.textContent}`);
-  console.log(`Clase Botón: ${target.className}`);
 };
 
 container.addEventListener("click", cambiarEstadoBoton);
@@ -25,16 +22,15 @@ const darkMode = () => {
   const botonDarkMode = document.querySelector(
     ".boton-dark-mode"
   );
-  const body = document.querySelector("body");
-  const lista = document.querySelectorAll(".lista__item");
+  const listaDataDarkMode =
+    document.querySelectorAll("[data-dark]");
   botonDarkMode.addEventListener("click", () => {
     botonDarkMode.textContent === "☀️"
       ? (botonDarkMode.textContent = "🌙")
       : (botonDarkMode.textContent = "☀️");
-    body.classList.toggle("dark-mode");
-    container.classList.toggle("dark-mode");
-    lista.forEach((item) => {
-      item.classList.toggle("dark-mode");
+
+    listaDataDarkMode.forEach((element) => {
+      element.classList.toggle("dark-mode");
     });
   });
 };
