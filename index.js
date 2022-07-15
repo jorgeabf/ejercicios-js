@@ -2,16 +2,21 @@ const container = document.querySelector(".container");
 
 cambiarEstadoBoton = (e) => {
   e.stopPropagation();
+  const target = e.target;
 
-  if (e.target.textContent === "OK") {
-    e.target.textContent = "NO";
-    e.target.classList.remove("ok");
-    e.target.classList.add("no");
-  } else if (e.target.textContent === "NO") {
-    e.target.textContent = "OK";
-    e.target.classList.remove("no");
-    e.target.classList.add("ok");
+  if (target.textContent === "OK") {
+    target.textContent = "NO";
+    target.classList.remove("ok");
+    target.classList.add("no");
+  } else if (target.textContent === "NO") {
+    target.textContent = "OK";
+    target.classList.remove("no");
+    target.classList.add("ok");
   }
+  console.log(
+    `Texto Botón: ${target.textContent} |`,
+    ` Clase Botón: ${target.className}`
+  );
 };
 
 container.addEventListener("click", cambiarEstadoBoton);

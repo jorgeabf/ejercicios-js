@@ -37,6 +37,7 @@ h6 {
 
 .titulo-2 {
     text-align: center;
+    text-transform: uppercase;
     color: hsl(210, 50%, 83%);
 }
 
@@ -70,8 +71,7 @@ h6 {
 }
 
 .ok,
-.no,
-.cabilando {
+.no {
     margin-bottom: 0;
     margin-left: auto;
     padding: .5em 2em;
@@ -84,9 +84,6 @@ h6 {
     background-color: hsl(100, 40%, 50%)
 }
 
-.cabilando {
-    background-color: hsl(50, 40%, 50%)
-}
 
 .no {
     background-color: hsl(0, 40%, 50%);
