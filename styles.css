@@ -1,30 +1,30 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+      box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: hsl(210, 50%, 83%);
-    color: hsl(0, 0%, 20%);
-    transition: background-color 0.3s ease, color 0.2s ease;
+      margin: 0;
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      background-color: hsl(210, 50%, 83%);
+      color: hsl(0, 0%, 30%);
+      transition: background-color 0.3s ease, color 0.2s ease;
 }
 
 body.dark-mode {
-    background-color: #123;
-    color: hsl(0, 0%, 90%);
+      background-color: #123;
+      color: hsl(0, 0%, 90%);
 }
 
 .container.dark-mode {
-    background-color: hsl(211, 49%, 17%)
+      background-color: hsl(211, 49%, 17%)
 }
 
 .lista__item.dark-mode {
-    background-color: hsl(210, 50%, 22%);
+      background-color: hsl(210, 50%, 22%);
 }
 
 h1,
@@ -33,102 +33,105 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+      margin-top: 0;
 }
 
 .container {
-    max-width: 80ch;
-    margin: 0 auto;
-    padding: 2em 4em;
-    background-color: hsl(211, 49%, 87%);
-    transition: background-color 0.3s ease;
+      max-width: 90ch;
+      margin: 0 auto;
+      padding: 2em 4em;
+      background-color: hsl(211, 49%, 87%);
+      transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 2em 1.5em;
-    }
+      .container {
+            padding: 2em 1em;
+      }
 }
 
 .titulo {
-    text-align: center;
-    text-transform: uppercase;
-    color: hsl(16, 80%, 50%)
+      text-align: center;
+      text-transform: uppercase;
+      color: hsl(16, 80%, 50%)
 }
 
 .titulo-2 {
-    text-align: center;
-    text-transform: uppercase;
+      text-align: center;
+      text-transform: uppercase;
 }
 
 .lista {
-    padding-left: 0;
-    font-size: 18px;
+      list-style-position: inside;
+      padding-left: 0;
+      font-size: 18px;
 }
 
 .lista__item {
-    position: relative;
-    padding: 1em;
-    padding-left: -2em;
-    border-radius: .3em;
-    background-color: hsl(211, 49%, 95%);
-    transition: background-color 0.3s ease;
+      position: relative;
+      padding: 1em;
+      border-radius: .3em;
+      background-color: hsl(211, 49%, 95%);
+      transition: background-color 0.3s ease;
 }
 
-.lista__item::marker {
-    color: hsl(0, 50%, 50%);
+.lista__item::marker,
+.lista-2__item::marker {
+      font-weight: bold;
+      color: hsl(0, 50%, 50%);
 }
 
 .lista__item,
 .lista-2__item {
-    line-height: 1.5;
-    margin-bottom: 1em;
+      line-height: 1.5;
+      margin-bottom: 1em;
 }
 
 .lista-2 {
-    padding-left: 1em;
-    list-style: square;
+      padding-left: 0;
+      list-style: square;
+      list-style-position: inside;
 }
 
 .ok,
 .no {
-    margin-bottom: 0;
-    margin-left: auto;
-    padding: .5em 2em;
-    border-radius: 3em;
-    width: max-content;
-    color: white;
-    cursor: pointer;
+      margin-bottom: 0;
+      margin-left: auto;
+      padding: .5em 2em;
+      border-radius: 3em;
+      width: max-content;
+      color: white;
+      cursor: pointer;
 }
 
 .ok {
-    background-color: hsl(100, 40%, 50%)
+      background-color: hsl(100, 40%, 50%)
 }
 
 
 .no {
-    background-color: hsl(0, 40%, 50%);
-    text-transform: uppercase;
+      background-color: hsl(0, 40%, 50%);
+      text-transform: uppercase;
 }
 
 .ok,
 .no {
-    padding-inline: 4.05em;
+      padding-inline: 4.05em;
 }
 
 .boton-dark-mode {
-    width: 3rem;
-    height: 3rem;
-    margin-left: auto;
-    margin-bottom: 1em;
-    border: none;
-    border-radius: 50%;
-    text-align: right;
-    font-size: 1.5rem;
-    background-color: hsl(0, 40%, 50%);
-    cursor: pointer;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+      width: 3rem;
+      height: 3rem;
+      margin-left: auto;
+      margin-bottom: 1em;
+      border: none;
+      border-radius: 50%;
+      text-align: right;
+      font-size: 1.5rem;
+      background-color: hsl(0, 40%, 50%);
+      cursor: pointer;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
 }
