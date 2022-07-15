@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #123;
+    color: hsl(0, 0%, 90%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+
+.container {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1em
+}
+
+.lista {
+    padding-left: 1em;
+    font-size: 18px
+}
+
+.lista__item,
+.lista-2__item {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+
+.lista-2 {
+    padding-left: 1em;
+    list-style: square;
+}
