@@ -1,4 +1,5 @@
-const container = document.querySelector(".container");
+const d = document;
+const container = d.querySelector(".container");
 
 cambiarEstadoBoton = (e) => {
   const target = e.target;
@@ -16,23 +17,39 @@ cambiarEstadoBoton = (e) => {
 
 container.addEventListener("click", cambiarEstadoBoton);
 
-/* ☀️ */
+/* DARK MODE */
+const ls = localStorage;
+const botonDarkMode = d.querySelector(".boton-dark-mode");
+const listaDataDarkMode = d.querySelectorAll("[data-dark]");
+let sol = "☀️";
+let luna = "🌙";
 
-const darkMode = () => {
-  const botonDarkMode = document.querySelector(
-    ".boton-dark-mode"
-  );
-  const listaDataDarkMode =
-    document.querySelectorAll("[data-dark]");
-  botonDarkMode.addEventListener("click", () => {
-    botonDarkMode.textContent === "☀️"
-      ? (botonDarkMode.textContent = "🌙")
-      : (botonDarkMode.textContent = "☀️");
-
-    listaDataDarkMode.forEach((element) => {
-      element.classList.toggle("dark-mode");
-    });
+const lightMode = () => {
+  listaDataDarkMode.forEach((element) => {
+    element.classList.remove("dark-mode");
+    botonDarkMode.textContent = luna;
+    ls.setItem("theme", "light");
   });
 };
 
-darkMode();
+const darkMode = () => {
+  listaDataDarkMode.forEach((element) => {
+    element.classList.add("dark-mode");
+    botonDarkMode.textContent = sol;
+    ls.setItem("theme", "dark");
+  });
+};
+
+const toggleDarkMode = () => {
+  botonDarkMode.addEventListener("click", () => {
+    botonDarkMode.textContent === luna ? darkMode() : lightMode();
+  });
+};
+
+toggleDarkMode();
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (ls.getItem("theme") === null) ls.setItem("theme", "light");
+  if (ls.getItem("theme") === "light") lightMode();
+  if (ls.getItem("theme") === "dark") darkMode();
+});
